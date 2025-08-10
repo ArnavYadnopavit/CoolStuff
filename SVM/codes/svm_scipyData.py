@@ -69,11 +69,12 @@ def plot_dataset(X, y, title, w, b):
     plt.grid(True)
     plt.legend()
     plt.tight_layout()
+    plt.savefig(f"../Documentation/figs/{title}")
     plt.show()
 
 # Plot training set
-plot_dataset(X_train, y_train, 'Training Data with Hyperplane', w, b)
+plot_dataset(X_train, y_train, 'TrainingDataWithHyperplane', w, b)
 
 # Plot test set
-plot_dataset(X_test, y_test, 'Test Data with Hyperplane', w, b)
+plot_dataset(X_test, y_test, 'TestDataWithHyperplane', w, b)
 

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define DIM 2
+#define DIM 43
 
 typedef struct data{
 	double x[DIM];
@@ -51,7 +51,7 @@ svm FindHyperplane(data* data,int size){
 				free(w2);
 				free(ret.w);
 				ret.w=w3;
-				ret.b=ret.b+h*data[j].y;
+				ret.b=ret.b-h*data[j].y;
 			}
 		}
 	}
